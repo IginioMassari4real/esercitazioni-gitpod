@@ -10,10 +10,16 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './third-component.component.css'
 })
 export class ThirdComponentComponent {
-  likes:number = 40;
+  like = 0;
+
+  constructor(){
+    this.like = Math.floor(Math.random () * 100);
+  }
+
+  aggiuntalike(){
+    if (this.like < 100)
+    this.like = this.like + 1
+  }
+
   
- clickBottone(){
-  this.likes = this.likes + 1
-  
- }
 }
